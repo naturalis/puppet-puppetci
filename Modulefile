@@ -1,10 +1,10 @@
-name    'mbarr-puppetci'
+name    'puppetci'
 version '0.0.1'
-source 'https://github.com/matthewbarr/puppet-ci'
-author 'mbarr'
+source 'https://github.com/naturalis/puppet-puppetci'
+author 'pgomersbach'
 license 'Apache License, Version 2.0'
 summary 'Jenkins Continous Integration server config for Puppet CI.'
-description 'Builds a jenkins server, with a job to do static analysis of puppet CI code.  It uses the github pull request builder.  You will need to edit settings, and is mostly designed as an example starting point.'
+description 'Builds a jenkins server, with a job to do static analysis of puppet CI code. Based on work of Matthew Barr'
 project_page 'https://github.com/matthewbarr/puppet-ci'
 
 ## Add dependencies, if any:
