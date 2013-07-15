@@ -17,7 +17,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.googlecode.GoogleCodeProjectProperty plugin="googlecode@1.7"/>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.6">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.7">
       <projectUrl>https://github.com/naturalis/puppet/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -36,11 +36,11 @@
       </hudson.plugins.git.BranchSpec>
     </branches>
     <disableSubmodules>false</disableSubmodules>
-    <recursiveSubmodules>false</recursiveSubmodules>
+    <recursiveSubmodules>true</recursiveSubmodules>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <authorOrCommitter>false</authorOrCommitter>
     <clean>false</clean>
-    <wipeOutWorkspace>false</wipeOutWorkspace>
+    <wipeOutWorkspace>true</wipeOutWorkspace>
     <pruneBranches>false</pruneBranches>
     <remotePoll>false</remotePoll>
     <ignoreNotifyCommit>false</ignoreNotifyCommit>
@@ -62,7 +62,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector">
+  <triggers>
     <hudson.triggers.TimerTrigger>
       <spec>@midnight</spec>
     </hudson.triggers.TimerTrigger>
@@ -108,7 +108,7 @@ grep -l -R ${WORKSPACE} * | while read fname; do perl -pi -e &quot;s@${WORKSPACE
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.26">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.27">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <thresholdLimit>low</thresholdLimit>
@@ -117,7 +117,7 @@ grep -l -R ${WORKSPACE} * | while read fname; do perl -pi -e &quot;s@${WORKSPACE
       <canRunOnFailed>false</canRunOnFailed>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.49">
+      <thresholds plugin="analysis-core@1.50">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
