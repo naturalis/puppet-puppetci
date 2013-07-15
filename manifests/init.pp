@@ -8,16 +8,15 @@
 #
 #
 # === Examples
-# For now, it needs manual editing, you can do this via the Jenkins GUI.  You'll need to set the Repo's on the Main settings,
-# and the URL for the github project in the job configuration.
+#
 #
 # === Authors
-#
-# Matthew Barr <mbarr@mbarr.net>
+# Paul Gomersbach
+# Based on work of Matthew Barr 
 #
 # === Copyright
 #
-# Copyright 2013 Matthew Barr.
+# Copyright 2013 Naturalis.
 #
 
 class puppetci (
