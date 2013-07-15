@@ -12,7 +12,7 @@
 #
 # === Authors
 # Paul Gomersbach
-# Based on work of Matthew Barr 
+# Based on work of Matthew Barr
 #
 # === Copyright
 #
