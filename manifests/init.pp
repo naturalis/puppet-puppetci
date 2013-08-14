@@ -40,6 +40,7 @@ class puppetci (
     'python-quantumclient':;
     'python-novaclient':;
     'nmap':
+    ensure  => latest,
     require => Apt::Source['folsomupdates'],
   }
 
