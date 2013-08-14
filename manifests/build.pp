@@ -19,6 +19,13 @@
 # Copyright 2013 Naturalis.
 #
 class puppetci::build {
+  package {
+    'python-quantumclient':;
+    'python-novaclient':;
+    'nmap':
+    ensure  => latest,
+  }
+
   exec { '/bin/sleep 30; /usr/bin/wget http://localhost:8080/job/PuppetCI/build -o /dev/null':
   }
 }

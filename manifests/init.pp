@@ -36,13 +36,6 @@ class puppetci (
     include_src => false,
     require     => Package['ubuntu-cloud-keyring'],
   }
-  package {
-    'python-quantumclient':;
-    'python-novaclient':;
-    'nmap':
-    ensure  => latest,
-    require => Apt::Source['folsomupdates'],
-  }
 
   #For RVM
   package {
