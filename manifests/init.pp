@@ -25,6 +25,23 @@ class puppetci (
   include puppet_lint
 
   package { 'realpath': }
+# nova tools to boot stack instances
+  package { 'ubuntu-cloud-keyring':
+    ensure => latest,
+  }
+  apt::source { 'folsomupdates':
+    location    => 'http://ubuntu-cloud.archive.canonical.com/ubuntu',
+    release     => 'precise-updates/folsom',
+    repos       => 'main',
+    include_src => false,
+    require     => Package['ubuntu-cloud-keyring'],
+  }
+  package {
+    'python-quantumclient':;
+    'python-novaclient':;
+    'nmap':
+    require => Apt::Source['folsomupdates'],
+  }
 
   #For RVM
   package {
